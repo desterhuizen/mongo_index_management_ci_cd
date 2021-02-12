@@ -1,0 +1,19 @@
+{
+ "collection_1": [
+    {
+      "keys":{
+        "field_1": 1,
+        "field_2": 1
+      }
+    }
+  ],
+  "collection_1": [
+    {
+      "keys":{
+        "field_1": 1,
+        "field_2":1,
+        "field_3":1
+      }
+    }
+  ],
+}
