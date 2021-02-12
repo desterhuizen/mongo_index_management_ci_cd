@@ -1,8 +1,8 @@
 # Index Management for Atlas projects
 
-Running and application that make use of MongoDB Atlas for a backing infrastructure pose an interesting problem for managing indexes. MongoDB Professional services generally reccommends managing the required indexes as part of the applicaiton repository. 
+Running an application that make use of MongoDB Atlas for a backing infrastructure pose an interesting problem for managing indexes. MongoDB generally reccommends managing the required indexes as part of the applicaiton repository. 
 
-During the release cycle a test can be run to check if all th required indexes exists. If there are missing indexes the release need to stop and not applciaiton changes should be completed. 
+During the release cycle a test can be run to check if all th required indexes exists. If there are missing indexes the release needs to stop and no applciaiton changes should be completed. 
 
 The indexes can be created via the Atlas API or the Atlas Console.
 
