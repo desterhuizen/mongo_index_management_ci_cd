@@ -11,10 +11,8 @@ The project creates a set of scripts that can be used by CI/CD tools to enforce 
 
 ## Retrieve current indexes for all collections of the provided database
 
-The order of input variables are fixed!!!
-
 ```
-retrieve_current_index_list.sh <username> <password> <atlas-cluster-uri-no-db> <dbname>
+python3 get_indexes.py -u <USERNAME> -p <PASSWORD> -d <DB_NAME> -c <CLUSTER_ADDR>
 ```
 
 ## Check required indexes vs the current indexes
@@ -26,7 +24,7 @@ python3 check_indexes.py -c current.json -r required.json
 ## Check will attempt to create the missing indexes makinguse of the Atlas API.
 
 ```
-create_missing_indexes.py  -u <Atlas Public API Key> -p <Atlas Private API Key> -g <Atlas Project ID> -c <Cluster Name>
+python3 create_missing_indexes.py  -u <Atlas Public API Key> -p <Atlas Private API Key> -g <Atlas Project ID> -c <Cluster Name>
 ```
 
 ## Required.json structure
