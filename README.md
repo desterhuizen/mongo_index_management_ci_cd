@@ -48,8 +48,6 @@ The required indexes are defined as a JSON document that contains a single docum
   "<COLLECTION2>": [
     {
       "keys":{
-        "<KEY1>": 1,
-        "<KEY2>": 1,
         "<KEY3>": 'hashed'
       }
     }
