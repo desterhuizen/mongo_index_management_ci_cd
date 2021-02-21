@@ -2,9 +2,7 @@
 
 import json
 import sys
-
 import argparse
-
 
 parser = argparse.ArgumentParser();
 parser.add_argument("-c", "--current_path", help="Path to the current indexes json file from retrieve_current_index_list.sh", type=str, required=True)
@@ -33,7 +31,6 @@ for collectionInfo in current:
 		currentIndexes[collectionInfo['collectionName']].append(tmpIndex)
 		currentIndexCatalog[collectionInfo['collectionName']].append(index['key'])
 		
-
 missingIndexes = {};
 missingIndexFound = False;
 

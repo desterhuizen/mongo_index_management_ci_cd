@@ -8,6 +8,11 @@ The indexes can be created via the Atlas API or the Atlas Console.
 
 The project creates a set of scripts that can be used by CI/CD tools to enforce the abotve recommendations. 
 
+## Install requirements
+```
+pip install -r requirements.txt
+```
+
 
 ## Retrieve current indexes for all collections of the provided database
 
@@ -24,7 +29,7 @@ python3 check_indexes.py -c current.json -r required.json
 ## Check will attempt to create the missing indexes makinguse of the Atlas API.
 
 ```
-python3 create_missing_indexes.py  -u <Atlas Public API Key> -p <Atlas Private API Key> -g <Atlas Project ID> -c <Cluster Name>
+python3 create_missing_indexes.py  -u <Atlas Public API Key> -p <Atlas Private API Key> -g <Atlas Project ID> -c <Cluster Name> -l <current.json> -r <required.json>
 ```
 
 ## Required.json structure
