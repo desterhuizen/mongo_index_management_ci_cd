@@ -10,6 +10,8 @@ parser.add_argument("-u", "--public-key", help="Atlas Project Public API Key", t
 parser.add_argument("-p", "--private-key", help="Atlas Project Private API Key",type=str, required=True)
 parser.add_argument("-g", "--project-id", help="Atlas Project ID",type=str, required=True)
 parser.add_argument("-c", "--cluster-name", help="Atlas Cluster name" ,type=str, required=True)
+parser.add_argument("-l", "--live", help="File path to the current indexe (result of the get_indexes.py)" ,type=str, required=False, default="current.json")
+parser.add_argument("-r", "--required", help="File path the the required indexes (json file in the repo)" ,type=str, required=False, default="required.json")
 parser.add_argument("-y", "--yes", help="Agree to build", action='store_true')
 parser.add_argument("--verbose", "-v", help="Verbose output", action='store_true')
 
@@ -20,6 +22,8 @@ passw=args.private_key
 project_id=args.project_id
 cluster_name=args.cluster_name
 agree=args.yes
+live=args.live
+required=args.required
 
 def create_index(db, collection, indexes):
 	headers = {'Accept': 'application/json',  'Content-Type': 'application/json'}
@@ -66,9 +70,9 @@ def yes_no(answer):
         else:
            print ("Please respond with 'yes' or 'no'")
 
-with open("current.json", "r") as file1:
+with open(live, "r") as file1:
 	current = json.load(file1)
-with open("required.json", "r") as file2:
+with open(required, "r") as file2:
 	requiredIndexes = json.load(file2)
 
 currentIndexes = {}
